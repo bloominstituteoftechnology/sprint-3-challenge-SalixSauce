@@ -226,14 +226,14 @@
         }
         
         feed(name) {
-          const fedAntsName = this.ant.filter(ant => ant.name === name);
+          const fedAntsName = this.ants.filter(ant => ant.name === name);
           if(fedAntsName.length > 0) {
             fedAntsName.forEach(ant => {
-              ant.health += 15;
-            })
+              ant.health += 15
+            });
             return "Yum!"
           } else {
-
+            return `${name} not found!`
           }
       }
     }
